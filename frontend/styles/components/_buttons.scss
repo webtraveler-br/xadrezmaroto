@@ -1,0 +1,92 @@
+@import '@/styles/utils/mixins';
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.8rem 2rem;
+	border-radius: 5px;
+	font-weight: 500;
+	transition: .5s ease;
+	text-decoration: none;
+	cursor: pointer;
+
+	&.btn-primary {
+		background-color: $accent;
+		color: #fff;
+		border: none;
+		// box-shadow: 0 4px 12px rgba(217, 154, 124, 0.25);
+
+		&:hover,
+		&:focus {
+			background-color: darken(#d99a7c, 10%);
+			transform: translateY(-2px);
+			// box-shadow: 0 4px 12px rgba(217, 154, 124, 0.25);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+
+	&.btn-secondary {
+		background-color: transparent;
+		border: 1px solid $foreground;
+		color: $foreground;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(74, 64, 56, 0.1);
+		}
+	}
+
+	&:disabled,
+	&.disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+		pointer-events: none;
+	}
+
+	&.btn-login {
+		background-color: transparent;
+		border: 1px solid $foreground;
+		color: $foreground;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(74, 64, 56, 0.1);
+		}
+	}
+
+	&.btn-register {
+		background-color: $foreground;
+		border: 1px solid $foreground;
+		color: $background;
+
+		&:hover,
+		&:focus {
+			background-color: rgba(74, 64, 56, 0.85);
+		}
+	}
+
+	&.btn-play {
+		background-color: $accent;
+		color: #fff;
+		font-size: $fs-md;
+		font-weight: 600;
+		padding: 1.5rem 3rem;
+		border-radius: 10px;
+		box-shadow: 0 4px 12px rgba(217, 154, 124, 0.25);
+
+		&:hover,
+		&:focus {
+			transform: translateY(-3px);
+			background-color: darken(#d99a7c, 5%);
+			box-shadow: 0 6px 16px rgba(217, 154, 124, 0.35);
+		}
+
+		&:active {
+			transform: translateY(0);
+		}
+	}
+}

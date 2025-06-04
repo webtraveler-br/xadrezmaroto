@@ -1,0 +1,26 @@
+@import '@/styles/utils/_variables.scss';
+@import '@/styles/utils/_mixins.scss';
+@import '@/styles/utils/_reset.scss';
+
+@import '@/styles/components/_buttons.scss';
+@import '@/styles/components/_home-hero.scss';
+
+@import '@/styles/layouts/_header.scss';
+@import '@/styles/layouts/_footer.scss';
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.home-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: $background;
+	color: $foreground;
+	position: relative;
+	overflow: hidden;
+}

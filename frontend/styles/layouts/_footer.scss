@@ -1,0 +1,10 @@
+@import '@/styles/utils/mixins';
+
+.footer {
+	padding: 2rem;
+	text-align: center;
+	position: relative;
+	z-index: 2;
+	font-size: $fs-xs;
+	color: rgba(74, 64, 56, 0.7);
+}

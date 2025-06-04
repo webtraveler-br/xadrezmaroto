@@ -1,0 +1,46 @@
+@import '@/styles/utils/mixins';
+
+.home-hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 3rem 1.5rem;
+	flex: 1;
+	max-width: 1200px;
+	margin: 0 auto;
+
+	h2 {
+		@include heading-xl;
+		margin-bottom: 2rem;
+		max-width: 800px;
+	}
+
+	p {
+		font-size: $fs-md;
+		margin-bottom: 3rem;
+		max-width: 600px;
+		line-height: 1.5;
+	}
+
+	@include tablet {
+		h2 {
+			font-size: 2.25rem;
+		}
+
+		p {
+			font-size: 1.1rem;
+		}
+	}
+
+	@include mobile {
+		h2 {
+			font-size: 1.75rem;
+		}
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
