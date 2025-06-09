@@ -9,16 +9,28 @@
 	.logo {
 		display: flex;
 		justify-content: center;
-		gap: 0.8rem;
 
-		h1 {
-			font-size: $fs-lg;
-			font-weight: 700;
-			margin: 0;
-		}
+		.logo-link {
+			display: flex;
+			align-items: center;
+			gap: 0.8rem;
+			color: $foreground;
+			text-decoration: none;
+			transition: transform 0.2s ease;
 
-		.chess-icon {
-			font-size: 2rem;
+			&:hover {
+				transform: scale(1.03);
+			}
+
+			h1 {
+				font-size: $fs-lg;
+				font-weight: 700;
+				margin: 0;
+			}
+
+			.chess-icon {
+				font-size: 2rem;
+			}
 		}
 	}
 

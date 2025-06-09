@@ -1,0 +1,130 @@
+.register-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: $background;
+	color: $foreground;
+	
+	.loading-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		
+		.loading-spinner {
+			width: 40px;
+			height: 40px;
+			border: 4px solid rgba($accent, 0.3);
+			border-radius: 50%;
+			border-top-color: $accent;
+			animation: spin 1s ease-in-out infinite;
+			margin-bottom: 1rem;
+		}
+		
+		p {
+			color: $foreground;
+			font-size: $fs-md;
+		}
+	}
+
+	.register-card {
+		max-width: 500px;
+		width: 100%;
+		margin: 2rem auto;
+		padding: 2rem;
+		background-color: #fff;
+		border-radius: 8px;
+		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+		h1 {
+			font-size: $fs-lg;
+			margin-bottom: 1.5rem;
+			text-align: center;
+		}
+
+		.form-group {
+			margin-bottom: 1.5rem;
+
+			label {
+				display: block;
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+			}
+
+			input {
+				width: 100%;
+				padding: 0.75rem;
+				border: 1px solid #ddd;
+				border-radius: 4px;
+				font-size: $fs-sm;
+				transition: border-color 0.3s;
+
+				&:focus {
+					outline: none;
+					border-color: $accent;
+				}
+
+				&.error {
+					border-color: $error;
+				}
+			}
+
+			.error-message {
+				color: $error;
+				font-size: $fs-xs;
+				margin-top: 0.25rem;
+			}
+		}
+
+		.form-footer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 2rem;
+
+			.login-link {
+				margin-top: 1rem;
+				font-size: $fs-sm;
+
+				a {
+					color: $accent;
+					text-decoration: underline;
+					margin-left: 0.25rem;
+
+					&:hover {
+						color: darken($accent, 10%);
+					}
+				}
+			}
+		}
+	}
+
+	.general-error {
+		background-color: rgba($error, 0.1);
+		border-left: 4px solid $error;
+		color: darken($error, 10%);
+		padding: 0.75rem;
+		margin-bottom: 1.5rem;
+		border-radius: 0 4px 4px 0;
+	}
+
+	.register-button {
+		width: 100%;
+	}
+}
+
+// Responsividade
+@include mobile {
+	.register-card {
+		margin: 1rem;
+		padding: 1.5rem;
+	}
+}
+
+// Animação do spinner de carregamento
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
